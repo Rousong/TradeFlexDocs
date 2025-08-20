@@ -249,6 +249,21 @@ footer h5 {
     color: white;
 }
 
+footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+footer .list-unstyled a {
+    color: #adb5bd !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .list-unstyled a:hover {
+    color: white !important;
+    text-decoration: underline;
+}
+
 /* 打印样式 */
 @media print {
     .navbar, footer {

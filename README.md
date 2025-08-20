@@ -8,6 +8,7 @@
 - **服务条款** - 使用 TradeFlex 应用时需要遵守的条款和条件  
 - **免责声明** - 投资风险提示和责任限制说明
 - **更新历史** - 查看应用的版本更新记录和新功能介绍
+- **帮助与支持** - 常见问题解答，获取使用帮助和技术支持
 
 ## 🌐 在线访问
 
@@ -18,6 +19,7 @@
 - **服务条款**: [https://rousong.github.io/TradeFlexDocs/terms.html](https://rousong.github.io/TradeFlexDocs/terms.html)
 - **免责声明**: [https://rousong.github.io/TradeFlexDocs/disclaimer.html](https://rousong.github.io/TradeFlexDocs/disclaimer.html)
 - **更新历史**: [https://rousong.github.io/TradeFlexDocs/changelog.html](https://rousong.github.io/TradeFlexDocs/changelog.html)
+- **帮助与支持**: [https://rousong.github.io/TradeFlexDocs/qa.html](https://rousong.github.io/TradeFlexDocs/qa.html)
 
 ## 🚀 如何部署
 
