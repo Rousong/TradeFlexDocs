@@ -43,13 +43,13 @@
             return langParam;
         }
 
-        // 2. 检查localStorage
+        // 2. 检查localStorage（用户手动选择的语言）
         const storedLang = localStorage.getItem('tradeFlex_preferred_language');
         if (storedLang && LANGUAGE_CONFIG.supportedLanguages.includes(storedLang)) {
             return storedLang;
         }
 
-        // 3. 检查浏览器语言
+        // 3. 检查浏览器语言（仅在首次访问时使用）
         const browserLang = navigator.language || navigator.userLanguage;
         const langCode = browserLang.split('-')[0]; // 'zh-CN' -> 'zh'
         
@@ -117,12 +117,17 @@
     /**
      * 重定向到指定语言版本
      * @param {string} targetLang 目标语言
+     * @param {boolean} isUserAction 是否为用户主动操作
      */
-    function redirectToLanguage(targetLang) {
+    function redirectToLanguage(targetLang, isUserAction = false) {
         const currentLang = getCurrentLanguage();
         
         // 如果已经是目标语言，不需要重定向
         if (currentLang === targetLang) {
+            // 即使是相同语言，如果是用户操作，也要保存偏好
+            if (isUserAction) {
+                localStorage.setItem('tradeFlex_preferred_language', targetLang);
+            }
             return;
         }
 
@@ -146,12 +151,35 @@
             return;
         }
 
-        const preferredLang = getUserPreferredLanguage();
         const currentLang = getCurrentLanguage();
         
-        // 如果首选语言与当前语言不同，进行重定向
-        if (preferredLang !== currentLang) {
-            redirectToLanguage(preferredLang);
+        // 检查用户是否已经手动选择过语言
+        const storedLang = localStorage.getItem('tradeFlex_preferred_language');
+        
+        // 如果用户已经手动选择过语言，优先使用用户选择
+        if (storedLang && LANGUAGE_CONFIG.supportedLanguages.includes(storedLang)) {
+            if (storedLang !== currentLang) {
+                redirectToLanguage(storedLang);
+            }
+            return;
+        }
+        
+        // 如果用户没有手动选择过语言，且当前不是通过语言切换访问的
+        // 只在访问根页面时进行浏览器语言检测
+        const referrer = document.referrer;
+        const isFromLanguageSwitch = referrer && (
+            referrer.includes('/en/') || 
+            referrer.includes(window.location.origin)
+        );
+        
+        // 如果不是从语言切换来的，且是访问根页面，才进行浏览器语言检测
+        if (!isFromLanguageSwitch && getCurrentPageName() === 'index.html') {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.split('-')[0];
+            
+            if (LANGUAGE_CONFIG.supportedLanguages.includes(langCode) && langCode !== currentLang) {
+                redirectToLanguage(langCode);
+            }
         }
     }
 
@@ -161,11 +189,24 @@
     function initLanguageSwitcher() {
         // 为语言切换链接添加事件监听器
         document.addEventListener('click', function(e) {
+            // 检查是否点击了语言切换链接
             const target = e.target.closest('[data-lang]');
             if (target) {
                 e.preventDefault();
                 const targetLang = target.getAttribute('data-lang');
-                redirectToLanguage(targetLang);
+                redirectToLanguage(targetLang, true); // 标记为用户操作
+                return;
+            }
+            
+            // 检查是否点击了下拉菜单中的语言链接
+            const dropdownItem = e.target.closest('.dropdown-menu .dropdown-item');
+            if (dropdownItem && dropdownItem.getAttribute('href')) {
+                const href = dropdownItem.getAttribute('href');
+                if (href.includes('en/') || href === 'index.html' || href === '../index.html') {
+                    e.preventDefault();
+                    const targetLang = href.includes('en/') ? 'en' : 'zh';
+                    redirectToLanguage(targetLang, true); // 标记为用户操作
+                }
             }
         });
 
