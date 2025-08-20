@@ -26,7 +26,7 @@ git push origin main
    ```
    Type: CNAME
    Name: docs (或您想要的子域名)
-   Value: yourusername.github.io
+   Value: rousong.github.io
    ```
 
 2. 更新 `CNAME` 文件中的域名
@@ -37,7 +37,7 @@ git push origin main
 
 将应用代码中的以下占位符替换为实际域名：
 
-- `https://yourusername.github.io/TradeFlexDoc/` 
+- `https://rousong.github.io/TradeFlexDocs/` 
 - 替换为: `https://docs.tradeflex.app/` （如果使用自定义域名）
 
 需要更新的文件：
