@@ -151,29 +151,21 @@
             return;
         }
 
-        const currentLang = getCurrentLanguage();
-        
         // 检查用户是否已经手动选择过语言
         const storedLang = localStorage.getItem('tradeFlex_preferred_language');
         
-        // 如果用户已经手动选择过语言，优先使用用户选择
+        // 如果用户已经手动选择过语言，完全停止自动重定向
         if (storedLang && LANGUAGE_CONFIG.supportedLanguages.includes(storedLang)) {
-            if (storedLang !== currentLang) {
-                redirectToLanguage(storedLang);
-            }
+            // 用户已经做过选择，不再进行任何自动重定向
             return;
         }
         
-        // 如果用户没有手动选择过语言，且当前不是通过语言切换访问的
-        // 只在访问根页面时进行浏览器语言检测
-        const referrer = document.referrer;
-        const isFromLanguageSwitch = referrer && (
-            referrer.includes('/en/') || 
-            referrer.includes(window.location.origin)
-        );
+        // 只有在用户从未手动选择过语言的情况下，才进行浏览器语言检测
+        // 并且只在访问根页面时进行
+        const currentLang = getCurrentLanguage();
+        const currentPage = getCurrentPageName();
         
-        // 如果不是从语言切换来的，且是访问根页面，才进行浏览器语言检测
-        if (!isFromLanguageSwitch && getCurrentPageName() === 'index.html') {
+        if (currentPage === 'index.html') {
             const browserLang = navigator.language || navigator.userLanguage;
             const langCode = browserLang.split('-')[0];
             
