@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - TradeFlex Documentation Center</title>
+    <meta name="description" content="TradeFlex app FAQ, help you quickly solve problems encountered during use">
+    
+    <!-- Favicon and Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#007bff">
+    <meta name="apple-mobile-web-app-title" content="TradeFlex Docs">
+    <meta name="application-name" content="TradeFlex Docs">
+    <meta name="msapplication-TileColor" content="#007bff">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        .qa-item {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        .qa-item:hover {
+            border-color: #007bff;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.1);
+        }
+        .qa-question {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .qa-question:hover {
+            background: #e9ecef;
+        }
+        .qa-answer {
+            background: white;
+        }
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="../assets/icons/favicon-32x32.png" alt="TradeFlex Logo" width="24" height="24" class="me-2">
+                TradeFlex Docs
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy.html">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms.html">Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="changelog.html">Changelog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="qa.html">Help & Support</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>English
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html">中文</a></li>
+                            <li><a class="dropdown-item active" href="index.html">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <h1 class="display-4 fw-bold text-primary mb-3">
+                        <i class="fas fa-life-ring me-3"></i>Help & Support
+                    </h1>
+                    <p class="lead text-muted">
+                        Find answers to common questions and get the help you need
+                    </p>
+                </div>
+
+                <!-- Search Box -->
+                <div class="search-box mb-5">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0" id="searchInput" 
+                               placeholder="Search for help topics..." onkeyup="searchFAQ()">
+                    </div>
+                </div>
+
+                <!-- Quick Help Categories -->
+                <div class="row mb-5">
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-primary bg-opacity-10 text-primary">
+                                    <i class="fas fa-rocket fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">Getting Started</h5>
+                                <p class="card-text text-muted small">Learn the basics of TradeFlex</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-success bg-opacity-10 text-success">
+                                    <i class="fas fa-chart-bar fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">Trading Records</h5>
+                                <p class="card-text text-muted small">Manage your trades and data</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-warning bg-opacity-10 text-warning">
+                                    <i class="fas fa-cog fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">Settings</h5>
+                                <p class="card-text text-muted small">Customize your experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-danger bg-opacity-10 text-danger">
+                                    <i class="fas fa-bug fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">Troubleshooting</h5>
+                                <p class="card-text text-muted small">Fix common issues</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Sections -->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        
+                        <!-- Getting Started -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-primary mb-4">
+                                <i class="fas fa-rocket me-2"></i>Getting Started
+                            </h2>
+                            
+                            <div class="qa-item" data-category="getting-started">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">How do I create my first trading record?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq1">
+                                    <div class="p-3">
+                                        <p>To create your first trading record:</p>
+                                        <ol>
+                                            <li>Open TradeFlex and tap the <strong>"+"</strong> button</li>
+                                            <li>Select <strong>"Add Trade"</strong></li>
+                                            <li>Choose the asset type (Stock, Crypto, Forex, etc.)</li>
+                                            <li>Enter the trade details (symbol, quantity, price, date)</li>
+                                            <li>Select whether it's a Buy or Sell transaction</li>
+                                            <li>Tap <strong>"Save"</strong> to record the trade</li>
+                                        </ol>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-lightbulb me-2"></i>
+                                            <strong>Tip:</strong> You can also import trades from CSV files if you have existing records.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="getting-started">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">What information do I need to track my trades?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq2">
+                                    <div class="p-3">
+                                        <p>For accurate tracking, you should record:</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Required Information:</h6>
+                                                <ul>
+                                                    <li>Asset symbol (e.g., AAPL, BTC)</li>
+                                                    <li>Trade type (Buy/Sell)</li>
+                                                    <li>Quantity/Volume</li>
+                                                    <li>Price per unit</li>
+                                                    <li>Trade date and time</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Optional Information:</h6>
+                                                <ul>
+                                                    <li>Trading fees/commissions</li>
+                                                    <li>Notes or strategy used</li>
+                                                    <li>Portfolio/account name</li>
+                                                    <li>Tags for categorization</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trading Records -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-success mb-4">
+                                <i class="fas fa-chart-bar me-2"></i>Trading Records Management
+                            </h2>
+                            
+                            <div class="qa-item" data-category="trading">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">How do I import trades from my broker?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq3">
+                                    <div class="p-3">
+                                        <p>You can import trades using CSV files:</p>
+                                        <ol>
+                                            <li>Export your trade history from your broker as a CSV file</li>
+                                            <li>In TradeFlex, go to <strong>Settings → Import/Export</strong></li>
+                                            <li>Tap <strong>"Import CSV"</strong></li>
+                                            <li>Select your CSV file and map the columns to TradeFlex fields</li>
+                                            <li>Review the preview and confirm the import</li>
+                                        </ol>
+                                        <div class="alert alert-warning">
+                                            <i class="fas fa-exclamation-triangle me-2"></i>
+                                            <strong>Note:</strong> Make sure your CSV file includes all required fields (symbol, type, quantity, price, date).
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="trading">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">Can I edit or delete trades after adding them?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq4">
+                                    <div class="p-3">
+                                        <p>Yes, you can modify your trades at any time:</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>To Edit a Trade:</h6>
+                                                <ol>
+                                                    <li>Find the trade in your trade list</li>
+                                                    <li>Tap on the trade to open details</li>
+                                                    <li>Tap the <strong>"Edit"</strong> button</li>
+                                                    <li>Make your changes and save</li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>To Delete a Trade:</h6>
+                                                <ol>
+                                                    <li>Open the trade details</li>
+                                                    <li>Tap the <strong>"Delete"</strong> button</li>
+                                                    <li>Confirm the deletion</li>
+                                                </ol>
+                                                <small class="text-muted">Note: Deleted trades cannot be recovered unless you have a backup.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Analytics & Reports -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-info mb-4">
+                                <i class="fas fa-chart-pie me-2"></i>Analytics & Reports
+                            </h2>
+                            
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">How are profit and loss calculated?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq5">
+                                    <div class="p-3">
+                                        <p>TradeFlex calculates P&L using the FIFO (First In, First Out) method:</p>
+                                        <div class="card bg-light">
+                                            <div class="card-body">
+                                                <h6>Example:</h6>
+                                                <ul class="mb-0">
+                                                    <li><strong>Buy:</strong> 100 shares of AAPL at $150 = $15,000</li>
+                                                    <li><strong>Sell:</strong> 50 shares of AAPL at $160 = $8,000</li>
+                                                    <li><strong>Profit:</strong> (160 - 150) × 50 = $500</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3">The app automatically accounts for:</p>
+                                        <ul>
+                                            <li>Trading fees and commissions</li>
+                                            <li>Currency conversions</li>
+                                            <li>Stock splits and dividends</li>
+                                            <li>Wash sale rules (where applicable)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">Can I export reports for tax purposes?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq6">
+                                    <div class="p-3">
+                                        <p>Yes, TradeFlex provides several export options for tax reporting:</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Available Formats:</h6>
+                                                <ul>
+                                                    <li>PDF reports</li>
+                                                    <li>Excel spreadsheets</li>
+                                                    <li>CSV files</li>
+                                                    <li>Tax-specific templates</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Report Types:</h6>
+                                                <ul>
+                                                    <li>Realized gains/losses</li>
+                                                    <li>Unrealized positions</li>
+                                                    <li>Dividend income</li>
+                                                    <li>Trading summary</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            <strong>Important:</strong> Always consult with a tax professional for specific tax advice.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Issues -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-danger mb-4">
+                                <i class="fas fa-bug me-2"></i>Troubleshooting
+                            </h2>
+                            
+                            <div class="qa-item" data-category="troubleshooting">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">The app is running slowly or crashing</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq7">
+                                    <div class="p-3">
+                                        <p>Try these troubleshooting steps:</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Quick Fixes:</h6>
+                                                <ol>
+                                                    <li>Force close and restart the app</li>
+                                                    <li>Restart your device</li>
+                                                    <li>Check for app updates</li>
+                                                    <li>Free up device storage space</li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Advanced Solutions:</h6>
+                                                <ol>
+                                                    <li>Clear app cache (Android)</li>
+                                                    <li>Reinstall the app</li>
+                                                    <li>Check device compatibility</li>
+                                                    <li>Contact support with crash logs</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-warning">
+                                            <i class="fas fa-exclamation-triangle me-2"></i>
+                                            <strong>Before reinstalling:</strong> Make sure to backup your data to avoid losing your trading records.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="troubleshooting">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">How do I backup and restore my data?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq8">
+                                    <div class="p-3">
+                                        <p>Protect your trading data with regular backups:</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>To Create a Backup:</h6>
+                                                <ol>
+                                                    <li>Go to <strong>Settings → Backup & Restore</strong></li>
+                                                    <li>Tap <strong>"Create Backup"</strong></li>
+                                                    <li>Choose backup location (local/cloud)</li>
+                                                    <li>Wait for backup completion</li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>To Restore Data:</h6>
+                                                <ol>
+                                                    <li>Go to <strong>Settings → Backup & Restore</strong></li>
+                                                    <li>Tap <strong>"Restore from Backup"</strong></li>
+                                                    <li>Select your backup file</li>
+                                                    <li>Confirm the restore operation</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-success">
+                                            <i class="fas fa-check-circle me-2"></i>
+                                            <strong>Recommendation:</strong> Set up automatic daily backups to ensure your data is always protected.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Support -->
+                        <div class="card shadow-sm border-0 bg-primary text-white">
+                            <div class="card-body p-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <h4 class="card-title mb-2">
+                                            <i class="fas fa-headset me-2"></i>Still Need Help?
+                                        </h4>
+                                        <p class="card-text mb-0">
+                                            Can't find what you're looking for? Our support team is here to help you resolve any issues.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <a href="mailto:tradeflexapp@gmail.com" class="btn btn-light btn-lg">
+                                            <i class="fas fa-envelope me-2"></i>Contact Support
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Resources -->
+                        <div class="row mt-5">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-book fa-2x text-primary mb-3"></i>
+                                        <h5>User Guide</h5>
+                                        <p class="text-muted small">Comprehensive documentation and tutorials</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-video fa-2x text-success mb-3"></i>
+                                        <h5>Video Tutorials</h5>
+                                        <p class="text-muted small">Step-by-step video guides</p>
+                                        <a href="#" class="btn btn-outline-success btn-sm">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-users fa-2x text-warning mb-3"></i>
+                                        <h5>Community</h5>
+                                        <p class="text-muted small">Connect with other TradeFlex users</p>
+                                        <a href="#" class="btn btn-outline-warning btn-sm">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3 text-white">TradeFlex</h5>
+                    <p class="text-light">Professional trading record and analysis application</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                        <li><a href="qa.html">Help & Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2025 TradeFlex. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-light">Last updated: January 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Redirect Script -->
+    <script src="../assets/js/lang-redirect.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FAQ Search and Interaction Script -->
+    <script>
+        // Search functionality
+        function searchFAQ() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const qaItems = document.querySelectorAll('.qa-item');
+            
+            qaItems.forEach(item => {
+                const question = item.querySelector('.qa-question h5').textContent.toLowerCase();
+                const answer = item.querySelector('.qa-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm === '' ? 'block' : 'none';
+                }
+            });
+        }
+
+        // Toggle chevron icons
+        document.addEventListener('DOMContentLoaded', function() {
+            const collapseElements = document.querySelectorAll('[data-bs-toggle="collapse"]');
+            
+            collapseElements.forEach(element => {
+                const target = document.querySelector(element.getAttribute('data-bs-target'));
+                const icon = element.querySelector('i.fa-chevron-down');
+                
+                target.addEventListener('show.bs.collapse', function() {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                });
+                
+                target.addEventListener('hide.bs.collapse', function() {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
