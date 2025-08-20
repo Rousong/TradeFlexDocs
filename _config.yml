@@ -1,0 +1,51 @@
+# GitHub Pages 配置文件
+title: TradeFlex 文档中心
+description: TradeFlex 应用的官方文档，包含隐私政策、服务条款、免责声明和更新历史
+baseurl: ""
+url: "https://yourusername.github.io/TradeFlexDoc"
+
+# 主题设置
+theme: minima
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO 设置
+lang: zh-CN
+author: TradeFlex Team
+
+# 社交媒体
+social:
+  email: tradeflexapp@gmail.com
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 包含和排除文件
+include:
+  - _pages
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
