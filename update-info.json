@@ -1,0 +1,8 @@
+{
+  "latest_version": "1.0.0",
+  "version_code": 1,
+  "release_date": "2025-12-01",
+  "is_force_update": false,
+  "update_message_zh": "发现新版本 1.0.0，建议您立即更新以获得最佳体验。本次更新包含重要功能改进和错误修复。",
+  "update_message_en": "New version 1.0.0 is available. We recommend updating immediately for the best experience. This update includes important feature improvements and bug fixes."
+}
