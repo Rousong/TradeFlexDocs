@@ -2,7 +2,7 @@
 title: TradeFlex 文档中心
 description: TradeFlex 应用的官方文档，包含隐私政策、服务条款、免责声明和更新历史
 baseurl: ""
-url: "https://rousong.github.io/TradeFlexDocs"
+url: "https://docs.tradeflex.app"
 
 # 主题设置
 theme: minima

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>帮助与支持 - TradeFlex 文档中心</title>
-    <meta name="description" content="TradeFlex 应用的常见问题解答，帮助您快速解决使用中遇到的问题">
+    <meta name="description" content="TradeFlex 应用常见问题解答，帮助您快速解决使用过程中遇到的问题">
     
     <!-- Favicon and Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
@@ -23,65 +23,44 @@
     <style>
         .qa-item {
             border: 1px solid #e9ecef;
-            border-radius: 10px;
+            border-radius: 8px;
             margin-bottom: 1rem;
-            overflow: hidden;
             transition: all 0.3s ease;
         }
         .qa-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #007bff;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.1);
         }
         .qa-question {
             background: #f8f9fa;
-            padding: 1.25rem;
-            margin: 0;
+            border-bottom: 1px solid #e9ecef;
             cursor: pointer;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-weight: 600;
-            color: #495057;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            transition: background-color 0.3s ease;
         }
         .qa-question:hover {
             background: #e9ecef;
         }
         .qa-answer {
-            padding: 1.25rem;
             background: white;
         }
-        .qa-category {
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-        .contact-card {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            color: white;
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-        }
         .search-box {
-            position: sticky;
-            top: 90px;
-            z-index: 100;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
         }
     </style>
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <img src="assets/icons/favicon-32x32.png" alt="TradeFlex Logo" width="24" height="24" class="me-2">
@@ -110,426 +89,448 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="qa.html">帮助与支持</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i>中文
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="index.html">中文</a></li>
+                            <li><a class="dropdown-item" href="en/index.html">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- 主要内容 -->
-    <main style="padding-top: 80px;">
-        <!-- Hero Section -->
-        <section class="legal-hero">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-8">
-                        <h1 class="fw-bold mb-4">
-                            <i class="fas fa-question-circle me-3"></i>帮助与支持
-                        </h1>
-                        <p class="lead mb-5">
-                            查找常见问题解答，获取使用帮助和技术支持
-                        </p>
+    <main class="container mt-5 pt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- 页面标题 -->
+                <div class="text-center mb-5">
+                    <h1 class="display-4 fw-bold text-primary mb-3">
+                        <i class="fas fa-life-ring me-3"></i>帮助与支持
+                    </h1>
+                    <p class="lead text-muted">
+                        查找常见问题的答案，获取您需要的帮助
+                    </p>
+                </div>
+
+                <!-- 搜索框 -->
+                <div class="search-box mb-5">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0" id="searchInput" 
+                               placeholder="搜索帮助主题..." onkeyup="searchFAQ()">
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 搜索框 -->
-        <section class="py-3">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="search-box">
-                            <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0">
-                                    <i class="fas fa-search text-muted"></i>
-                                </span>
-                                <input type="text" class="form-control border-start-0" id="searchInput" 
-                                       placeholder="搜索问题关键词...">
+                <!-- 快速帮助分类 -->
+                <div class="row mb-5">
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-primary bg-opacity-10 text-primary">
+                                    <i class="fas fa-rocket fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">快速入门</h5>
+                                <p class="card-text text-muted small">学习 TradeFlex 的基础知识</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-success bg-opacity-10 text-success">
+                                    <i class="fas fa-chart-bar fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">交易记录</h5>
+                                <p class="card-text text-muted small">管理您的交易和数据</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-warning bg-opacity-10 text-warning">
+                                    <i class="fas fa-cog fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">设置</h5>
+                                <p class="card-text text-muted small">自定义您的使用体验</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="category-icon bg-danger bg-opacity-10 text-danger">
+                                    <i class="fas fa-bug fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">故障排除</h5>
+                                <p class="card-text text-muted small">解决常见问题</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- QA 内容 -->
-        <section class="pb-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
+                <!-- 常见问题解答部分 -->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
                         
-                        <!-- 快速导航 -->
-                        <div class="row g-3 mb-5">
-                            <div class="col-md-3">
-                                <a href="#getting-started" class="card h-100 text-decoration-none">
-                                    <div class="card-body text-center">
-                                        <i class="fas fa-play-circle fa-2x text-primary mb-2"></i>
-                                        <h6>新手入门</h6>
+                        <!-- 快速入门 -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-primary mb-4">
+                                <i class="fas fa-rocket me-2"></i>快速入门
+                            </h2>
+                            
+                            <div class="qa-item" data-category="getting-started">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">如何创建我的第一笔交易记录？</h5>
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#account-management" class="card h-100 text-decoration-none">
-                                    <div class="card-body text-center">
-                                        <i class="fas fa-user-cog fa-2x text-success mb-2"></i>
-                                        <h6>账户管理</h6>
+                                </div>
+                                <div class="collapse qa-answer" id="faq1">
+                                    <div class="p-3">
+                                        <p>创建您的第一笔交易记录：</p>
+                                        <ol>
+                                            <li>打开 TradeFlex 并点击 <strong>"+"</strong> 按钮</li>
+                                            <li>选择 <strong>"添加交易"</strong></li>
+                                            <li>选择资产类型（股票、加密货币、外汇等）</li>
+                                            <li>输入交易详情（代码、数量、价格、日期）</li>
+                                            <li>选择是买入还是卖出交易</li>
+                                            <li>点击 <strong>"保存"</strong> 记录交易</li>
+                                        </ol>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-lightbulb me-2"></i>
+                                            <strong>提示：</strong> 如果您有现有记录，也可以从CSV文件导入交易。
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
-                            <div class="col-md-3">
-                                <a href="#trading-features" class="card h-100 text-decoration-none">
-                                    <div class="card-body text-center">
-                                        <i class="fas fa-chart-bar fa-2x text-warning mb-2"></i>
-                                        <h6>交易功能</h6>
+
+                            <div class="qa-item" data-category="getting-started">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">跟踪交易需要哪些信息？</h5>
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#technical-support" class="card h-100 text-decoration-none">
-                                    <div class="card-body text-center">
-                                        <i class="fas fa-tools fa-2x text-info mb-2"></i>
-                                        <h6>技术支持</h6>
+                                </div>
+                                <div class="collapse qa-answer" id="faq2">
+                                    <div class="p-3">
+                                        <p>为了准确跟踪，您应该记录：</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>必需信息：</h6>
+                                                <ul>
+                                                    <li>资产代码（如 AAPL、BTC）</li>
+                                                    <li>交易类型（买入/卖出）</li>
+                                                    <li>数量/交易量</li>
+                                                    <li>单价</li>
+                                                    <li>交易日期和时间</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>可选信息：</h6>
+                                                <ul>
+                                                    <li>交易费用/佣金</li>
+                                                    <li>备注或使用的策略</li>
+                                                    <li>投资组合/账户名称</li>
+                                                    <li>分类标签</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 新手入门 -->
-                        <div id="getting-started" class="qa-category">
-                            <h3><i class="fas fa-play-circle me-2"></i>新手入门</h3>
-                            <p class="mb-0">开始使用 TradeFlex 的基础指南</p>
-                        </div>
+                        <!-- 交易记录管理 -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-success mb-4">
+                                <i class="fas fa-chart-bar me-2"></i>交易记录管理
+                            </h2>
+                            
+                            <div class="qa-item" data-category="trading">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">如何从券商导入交易记录？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq3">
+                                    <div class="p-3">
+                                        <p>您可以使用CSV文件导入交易：</p>
+                                        <ol>
+                                            <li>从您的券商导出交易历史为CSV文件</li>
+                                            <li>在 TradeFlex 中，前往 <strong>设置 → 导入/导出</strong></li>
+                                            <li>点击 <strong>"导入CSV"</strong></li>
+                                            <li>选择您的CSV文件并将列映射到TradeFlex字段</li>
+                                            <li>预览并确认导入</li>
+                                        </ol>
+                                        <div class="alert alert-warning">
+                                            <i class="fas fa-exclamation-triangle me-2"></i>
+                                            <strong>注意：</strong> 确保您的CSV文件包含所有必需字段（代码、类型、数量、价格、日期）。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa1">
-                                什么是 TradeFlex？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa1" class="collapse qa-answer">
-                                <p>TradeFlex 是一款专业的交易记录和投资组合管理应用，帮助投资者：</p>
-                                <ul>
-                                    <li>记录和跟踪所有交易活动</li>
-                                    <li>分析投资组合表现</li>
-                                    <li>生成详细的统计报告</li>
-                                    <li>管理多个投资账户</li>
-                                    <li>跨设备同步数据</li>
-                                </ul>
-                                <p>无论您是新手投资者还是经验丰富的交易员，TradeFlex 都能帮助您更好地管理投资。</p>
+                            <div class="qa-item" data-category="trading">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">添加后可以编辑或删除交易吗？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq4">
+                                    <div class="p-3">
+                                        <p>是的，您可以随时修改您的交易：</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>编辑交易：</h6>
+                                                <ol>
+                                                    <li>在交易列表中找到交易</li>
+                                                    <li>点击交易打开详情</li>
+                                                    <li>点击 <strong>"编辑"</strong> 按钮</li>
+                                                    <li>进行更改并保存</li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>删除交易：</h6>
+                                                <ol>
+                                                    <li>打开交易详情</li>
+                                                    <li>点击 <strong>"删除"</strong> 按钮</li>
+                                                    <li>确认删除</li>
+                                                </ol>
+                                                <small class="text-muted">注意：除非您有备份，否则已删除的交易无法恢复。</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa2">
-                                如何创建我的第一个投资组合？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa2" class="collapse qa-answer">
-                                <p>创建投资组合非常简单：</p>
-                                <ol>
-                                    <li>打开 TradeFlex 应用</li>
-                                    <li>点击 "+" 或 "创建投资组合" 按钮</li>
-                                    <li>输入投资组合名称（如：股票投资、加密货币等）</li>
-                                    <li>选择基础货币（人民币、美元等）</li>
-                                    <li>设置初始资金（可选）</li>
-                                    <li>点击 "创建" 完成设置</li>
-                                </ol>
-                                <p>创建后，您就可以开始记录交易了！</p>
-                            </div>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa3">
-                                如何记录我的第一笔交易？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa3" class="collapse qa-answer">
-                                <p>记录交易的步骤：</p>
-                                <ol>
-                                    <li>进入您的投资组合</li>
-                                    <li>点击 "添加交易" 按钮</li>
-                                    <li>选择交易类型（买入/卖出）</li>
-                                    <li>输入股票代码或名称</li>
-                                    <li>填写交易数量和价格</li>
-                                    <li>选择交易日期</li>
-                                    <li>添加手续费（如有）</li>
-                                    <li>保存交易记录</li>
-                                </ol>
-                                <p>系统会自动计算您的持仓和收益情况。</p>
-                            </div>
-                        </div>
-
-                        <!-- 账户管理 -->
-                        <div id="account-management" class="qa-category">
-                            <h3><i class="fas fa-user-cog me-2"></i>账户管理</h3>
-                            <p class="mb-0">管理您的账户设置和数据</p>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa4">
-                                如何备份我的数据？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa4" class="collapse qa-answer">
-                                <p>TradeFlex 提供多种数据备份方式：</p>
-                                <h6>云端同步（推荐）</h6>
-                                <ul>
-                                    <li>注册 TradeFlex 账户</li>
-                                    <li>登录后数据自动云端备份</li>
-                                    <li>支持多设备同步</li>
-                                </ul>
-                                <h6>本地导出</h6>
-                                <ul>
-                                    <li>进入设置 → 数据管理</li>
-                                    <li>选择 "导出数据"</li>
-                                    <li>选择导出格式（CSV、Excel）</li>
-                                    <li>保存到本地存储</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa5">
-                                如何在多设备间同步数据？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa5" class="collapse qa-answer">
-                                <p>要在多设备间同步数据，请：</p>
-                                <ol>
-                                    <li>确保所有设备都安装了 TradeFlex</li>
-                                    <li>使用同一个账户登录所有设备</li>
-                                    <li>确保网络连接正常</li>
-                                    <li>在设置中启用 "自动同步"</li>
-                                </ol>
-                                <p><strong>注意：</strong>首次同步可能需要几分钟时间，请保持网络连接稳定。</p>
-                            </div>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa6">
-                                忘记密码怎么办？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa6" class="collapse qa-answer">
-                                <p>重置密码的步骤：</p>
-                                <ol>
-                                    <li>在登录页面点击 "忘记密码"</li>
-                                    <li>输入您的注册邮箱</li>
-                                    <li>查收重置密码邮件</li>
-                                    <li>点击邮件中的重置链接</li>
-                                    <li>设置新密码</li>
-                                </ol>
-                                <p>如果没有收到邮件，请检查垃圾邮件文件夹，或联系客服获取帮助。</p>
-                            </div>
-                        </div>
-
-                        <!-- 交易功能 -->
-                        <div id="trading-features" class="qa-category">
-                            <h3><i class="fas fa-chart-bar me-2"></i>交易功能</h3>
-                            <p class="mb-0">了解交易记录和分析功能</p>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa7">
-                                支持哪些类型的投资产品？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa7" class="collapse qa-answer">
-                                <p>TradeFlex 支持多种投资产品：</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h6>股票类</h6>
+                        <!-- 分析与报告 -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-info mb-4">
+                                <i class="fas fa-chart-pie me-2"></i>分析与报告
+                            </h2>
+                            
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">盈亏是如何计算的？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq5">
+                                    <div class="p-3">
+                                        <p>TradeFlex 使用先进先出（FIFO）方法计算盈亏：</p>
+                                        <div class="card bg-light">
+                                            <div class="card-body">
+                                                <h6>示例：</h6>
+                                                <ul class="mb-0">
+                                                    <li><strong>买入：</strong> 100股苹果股票 @ $150 = $15,000</li>
+                                                    <li><strong>卖出：</strong> 50股苹果股票 @ $160 = $8,000</li>
+                                                    <li><strong>利润：</strong> (160 - 150) × 50 = $500</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3">应用自动考虑：</p>
                                         <ul>
-                                            <li>A股（沪深股市）</li>
-                                            <li>港股</li>
-                                            <li>美股</li>
-                                            <li>其他国际股票</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h6>其他产品</h6>
-                                        <ul>
-                                            <li>基金（公募、私募）</li>
-                                            <li>加密货币</li>
-                                            <li>期货</li>
-                                            <li>外汇</li>
+                                            <li>交易费用和佣金</li>
+                                            <li>货币转换</li>
+                                            <li>股票分割和股息</li>
+                                            <li>洗售规则（如适用）</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <p>如需支持其他产品类型，请联系我们的客服团队。</p>
                             </div>
-                        </div>
 
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa8">
-                                如何查看我的投资收益？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa8" class="collapse qa-answer">
-                                <p>查看投资收益的方法：</p>
-                                <h6>总览页面</h6>
-                                <ul>
-                                    <li>总资产价值</li>
-                                    <li>总收益金额和收益率</li>
-                                    <li>今日盈亏</li>
-                                </ul>
-                                <h6>详细分析</h6>
-                                <ul>
-                                    <li>进入 "统计" 页面</li>
-                                    <li>查看收益趋势图表</li>
-                                    <li>按时间段筛选</li>
-                                    <li>查看单个股票表现</li>
-                                </ul>
-                                <h6>报告功能</h6>
-                                <ul>
-                                    <li>生成月度/年度报告</li>
-                                    <li>导出详细数据</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa9">
-                                可以批量导入交易记录吗？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa9" class="collapse qa-answer">
-                                <p>是的，TradeFlex 支持批量导入功能：</p>
-                                <h6>支持的格式</h6>
-                                <ul>
-                                    <li>CSV 文件</li>
-                                    <li>Excel 文件（.xlsx）</li>
-                                    <li>券商导出的交易记录</li>
-                                </ul>
-                                <h6>导入步骤</h6>
-                                <ol>
-                                    <li>进入投资组合</li>
-                                    <li>点击 "更多" → "导入交易"</li>
-                                    <li>选择文件格式</li>
-                                    <li>上传文件</li>
-                                    <li>预览并确认数据</li>
-                                    <li>完成导入</li>
-                                </ol>
-                                <p><strong>提示：</strong>建议先下载模板文件，了解正确的格式要求。</p>
-                            </div>
-                        </div>
-
-                        <!-- 技术支持 -->
-                        <div id="technical-support" class="qa-category">
-                            <h3><i class="fas fa-tools me-2"></i>技术支持</h3>
-                            <p class="mb-0">解决技术问题和故障排除</p>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa10">
-                                应用闪退或卡顿怎么办？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa10" class="collapse qa-answer">
-                                <p>遇到应用问题时，请尝试以下解决方案：</p>
-                                <h6>基础排查</h6>
-                                <ol>
-                                    <li>重启应用</li>
-                                    <li>重启设备</li>
-                                    <li>检查网络连接</li>
-                                    <li>确保应用是最新版本</li>
-                                </ol>
-                                <h6>进阶解决</h6>
-                                <ul>
-                                    <li>清理应用缓存</li>
-                                    <li>释放设备存储空间</li>
-                                    <li>关闭其他后台应用</li>
-                                </ul>
-                                <p>如问题持续存在，请联系技术支持并提供详细的错误信息。</p>
-                            </div>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa11">
-                                数据同步失败怎么办？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa11" class="collapse qa-answer">
-                                <p>数据同步问题的解决方法：</p>
-                                <h6>检查网络</h6>
-                                <ul>
-                                    <li>确保网络连接稳定</li>
-                                    <li>尝试切换网络（WiFi/移动数据）</li>
-                                </ul>
-                                <h6>账户状态</h6>
-                                <ul>
-                                    <li>确认已登录账户</li>
-                                    <li>检查账户是否正常</li>
-                                </ul>
-                                <h6>手动同步</h6>
-                                <ul>
-                                    <li>进入设置 → 账户</li>
-                                    <li>点击 "立即同步"</li>
-                                    <li>等待同步完成</li>
-                                </ul>
-                                <p>如仍无法解决，请联系客服获取专业帮助。</p>
-                            </div>
-                        </div>
-
-                        <div class="qa-item">
-                            <button class="qa-question" type="button" data-bs-toggle="collapse" data-bs-target="#qa12">
-                                如何报告问题或建议新功能？
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div id="qa12" class="collapse qa-answer">
-                                <p>我们欢迎您的反馈和建议：</p>
-                                <h6>应用内反馈</h6>
-                                <ul>
-                                    <li>设置 → 帮助与反馈</li>
-                                    <li>选择问题类型</li>
-                                    <li>详细描述问题</li>
-                                    <li>提交反馈</li>
-                                </ul>
-                                <h6>邮件联系</h6>
-                                <ul>
-                                    <li>发送邮件至：tradeflexapp@gmail.com</li>
-                                    <li>请包含设备信息和详细描述</li>
-                                    <li>如有截图请一并发送</li>
-                                </ul>
-                                <p>我们会在 5 个工作日内回复您的反馈。</p>
-                            </div>
-                        </div>
-
-                        <!-- 联系我们 -->
-                        <div class="contact-card mt-5">
-                            <div class="row align-items-center">
-                                <div class="col-md-8">
-                                    <h4><i class="fas fa-headset me-2"></i>还有其他问题？</h4>
-                                    <p class="mb-0">我们的客服团队随时为您提供帮助</p>
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">可以导出税务报告吗？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 text-md-end">
-                                    <a href="mailto:tradeflexapp@gmail.com" class="btn btn-light btn-lg">
-                                        <i class="fas fa-envelope me-2"></i>联系客服
-                                    </a>
+                                <div class="collapse qa-answer" id="faq6">
+                                    <div class="p-3">
+                                        <p>是的，TradeFlex 提供多种税务报告导出选项：</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>可用格式：</h6>
+                                                <ul>
+                                                    <li>PDF报告</li>
+                                                    <li>Excel电子表格</li>
+                                                    <li>CSV文件</li>
+                                                    <li>税务专用模板</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>报告类型：</h6>
+                                                <ul>
+                                                    <li>已实现收益/损失</li>
+                                                    <li>未实现持仓</li>
+                                                    <li>股息收入</li>
+                                                    <li>交易摘要</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            <strong>重要提示：</strong> 对于具体的税务建议，请务必咨询税务专业人士。
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="my-3">
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <i class="fas fa-clock fa-2x mb-2"></i>
-                                    <h6>响应时间</h6>
-                                    <p>5个工作日内回复</p>
+                        </div>
+
+                        <!-- 技术问题 -->
+                        <div class="mb-5">
+                            <h2 class="h3 text-danger mb-4">
+                                <i class="fas fa-bug me-2"></i>故障排除
+                            </h2>
+                            
+                            <div class="qa-item" data-category="troubleshooting">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">应用运行缓慢或崩溃</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <i class="fas fa-globe fa-2x mb-2"></i>
-                                    <h6>服务时间</h6>
-                                    <p>周一至周五 9:00-18:00</p>
+                                <div class="collapse qa-answer" id="faq7">
+                                    <div class="p-3">
+                                        <p>尝试以下故障排除步骤：</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>快速修复：</h6>
+                                                <ol>
+                                                    <li>强制关闭并重启应用</li>
+                                                    <li>重启您的设备</li>
+                                                    <li>检查应用更新</li>
+                                                    <li>释放设备存储空间</li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>高级解决方案：</h6>
+                                                <ol>
+                                                    <li>清除应用缓存（Android）</li>
+                                                    <li>重新安装应用</li>
+                                                    <li>检查设备兼容性</li>
+                                                    <li>联系支持并提供崩溃日志</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-warning">
+                                            <i class="fas fa-exclamation-triangle me-2"></i>
+                                            <strong>重新安装前：</strong> 请确保备份您的数据，以避免丢失交易记录。
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <i class="fas fa-language fa-2x mb-2"></i>
-                                    <h6>服务语言</h6>
-                                    <p>中文、English</p>
+                            </div>
+
+                            <div class="qa-item" data-category="troubleshooting">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">如何备份和恢复我的数据？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq8">
+                                    <div class="p-3">
+                                        <p>通过定期备份保护您的交易数据：</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>创建备份：</h6>
+                                                <ol>
+                                                    <li>前往 <strong>设置 → 备份与恢复</strong></li>
+                                                    <li>点击 <strong>"创建备份"</strong></li>
+                                                    <li>选择备份位置（本地/云端）</li>
+                                                    <li>等待备份完成</li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>恢复数据：</h6>
+                                                <ol>
+                                                    <li>前往 <strong>设置 → 备份与恢复</strong></li>
+                                                    <li>点击 <strong>"从备份恢复"</strong></li>
+                                                    <li>选择您的备份文件</li>
+                                                    <li>确认恢复操作</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-success">
+                                            <i class="fas fa-check-circle me-2"></i>
+                                            <strong>建议：</strong> 设置自动每日备份以确保您的数据始终受到保护。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 联系支持 -->
+                        <div class="card shadow-sm border-0 bg-primary text-white">
+                            <div class="card-body p-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <h4 class="card-title mb-2">
+                                            <i class="fas fa-headset me-2"></i>仍需要帮助？
+                                        </h4>
+                                        <p class="card-text mb-0">
+                                            找不到您要找的内容？我们的支持团队随时为您解决任何问题。
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <a href="mailto:tradeflexapp@gmail.com" class="btn btn-light btn-lg">
+                                            <i class="fas fa-envelope me-2"></i>联系支持
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 其他资源 -->
+                        <div class="row mt-5">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-book fa-2x text-primary mb-3"></i>
+                                        <h5>用户指南</h5>
+                                        <p class="text-muted small">全面的文档和教程</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">即将推出</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-video fa-2x text-success mb-3"></i>
+                                        <h5>视频教程</h5>
+                                        <p class="text-muted small">分步视频指南</p>
+                                        <a href="#" class="btn btn-outline-success btn-sm">即将推出</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-users fa-2x text-warning mb-3"></i>
+                                        <h5>社区</h5>
+                                        <p class="text-muted small">与其他 TradeFlex 用户交流</p>
+                                        <a href="#" class="btn btn-outline-warning btn-sm">即将推出</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- 页脚 -->
@@ -547,6 +548,7 @@
                         <li><a href="terms.html">服务条款</a></li>
                         <li><a href="disclaimer.html">免责声明</a></li>
                         <li><a href="changelog.html">更新历史</a></li>
+                        <li><a href="qa.html">帮助与支持</a></li>
                     </ul>
                 </div>
             </div>
@@ -556,21 +558,23 @@
                     <p class="mb-0 text-light">&copy; 2025 TradeFlex. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0 text-light">最后更新: 2025年1月</p>
+                    <p class="mb-0 text-light">最后更新：2025年1月</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FAQ 搜索和交互脚本 -->
     <script>
         // 搜索功能
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
+        function searchFAQ() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const qaItems = document.querySelectorAll('.qa-item');
             
             qaItems.forEach(item => {
-                const question = item.querySelector('.qa-question').textContent.toLowerCase();
+                const question = item.querySelector('.qa-question h5').textContent.toLowerCase();
                 const answer = item.querySelector('.qa-answer').textContent.toLowerCase();
                 
                 if (question.includes(searchTerm) || answer.includes(searchTerm)) {
@@ -579,9 +583,9 @@
                     item.style.display = searchTerm === '' ? 'block' : 'none';
                 }
             });
-        });
+        }
 
-        // 折叠图标切换
+        // 切换箭头图标
         document.addEventListener('DOMContentLoaded', function() {
             const collapseElements = document.querySelectorAll('[data-bs-toggle="collapse"]');
             
@@ -590,26 +594,14 @@
                 const icon = element.querySelector('i.fa-chevron-down');
                 
                 target.addEventListener('show.bs.collapse', function() {
-                    icon.style.transform = 'rotate(180deg)';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
                 });
                 
                 target.addEventListener('hide.bs.collapse', function() {
-                    icon.style.transform = 'rotate(0deg)';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
                 });
-            });
-        });
-
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
             });
         });
     </script>
