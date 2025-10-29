@@ -12,12 +12,12 @@
         supportedLanguages: ['zh', 'en'],
         
         // 默认语言
-        defaultLanguage: 'zh',
+        defaultLanguage: 'en',
         
         // 语言路径映射
         languagePaths: {
-            'zh': '',      // 中文在根目录
-            'en': 'en/'    // 英文在 en/ 子目录
+            'en': '',      // 英文在根目录
+            'zh': 'zh/'    // 中文在 zh/ 子目录
         },
         
         // 页面映射
@@ -68,13 +68,13 @@
     function getCurrentLanguage() {
         const path = window.location.pathname;
         
-        // 检查是否在英文目录
-        if (path.includes('/en/')) {
-            return 'en';
+        // 检查是否在中文目录
+        if (path.includes('/zh/')) {
+            return 'zh';
         }
         
-        // 默认为中文
-        return 'zh';
+        // 默认为英文
+        return 'en';
     }
 
     /**
@@ -99,8 +99,8 @@
         
         // 如果当前在子目录，需要回到根目录
         let targetPath = basePath;
-        if (getCurrentLanguage() === 'en') {
-            targetPath = basePath.replace('/en', '');
+        if (getCurrentLanguage() === 'zh') {
+            targetPath = basePath.replace('/zh', '');
         }
         
         // 添加语言路径
@@ -194,9 +194,9 @@
             const dropdownItem = e.target.closest('.dropdown-menu .dropdown-item');
             if (dropdownItem && dropdownItem.getAttribute('href')) {
                 const href = dropdownItem.getAttribute('href');
-                if (href.includes('en/') || href === 'index.html' || href === '../index.html') {
+                if (href.includes('zh/') || href === 'index.html' || href === '../index.html') {
                     e.preventDefault();
-                    const targetLang = href.includes('en/') ? 'en' : 'zh';
+                    const targetLang = href.includes('zh/') ? 'zh' : 'en';
                     redirectToLanguage(targetLang, true); // 标记为用户操作
                 }
             }
@@ -217,8 +217,8 @@
             const href = item.getAttribute('href');
             if (href) {
                 // 检查是否是语言切换链接
-                if (href.includes('en/') || href === 'index.html') {
-                    const targetLang = href.includes('en/') ? 'en' : 'zh';
+                if (href.includes('zh/') || href === 'index.html') {
+                    const targetLang = href.includes('zh/') ? 'zh' : 'en';
                     const targetUrl = buildTargetUrl(targetLang, currentPage);
                     item.setAttribute('href', targetUrl);
                 }
