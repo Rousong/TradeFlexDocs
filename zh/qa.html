@@ -189,24 +189,34 @@
                             <div class="qa-item" data-category="getting-started">
                                 <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq1">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">如何创建我的第一笔交易记录？</h5>
+                                        <h5 class="mb-0">可不可以自动导入券商的交易记录？</h5>
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                                 <div class="collapse qa-answer" id="faq1">
                                     <div class="p-3">
-                                        <p>创建您的第一笔交易记录：</p>
-                                        <ol>
-                                            <li>打开 TradeFlex 并点击 <strong>"+"</strong> 按钮</li>
-                                            <li>选择 <strong>"添加交易"</strong></li>
-                                            <li>选择资产类型（股票、加密货币、外汇等）</li>
-                                            <li>输入交易详情（代码、数量、价格、日期）</li>
-                                            <li>选择是买入还是卖出交易</li>
-                                            <li>点击 <strong>"保存"</strong> 记录交易</li>
-                                        </ol>
+                                        <p>很抱歉，TradeFlex 不支持自动导入券商的交易记录。这是基于以下几个重要原因：</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>隐私保护优先</h6>
+                                                <ul>
+                                                    <li>TradeFlex 采用<strong>纯本地存储</strong>，所有数据都保存在您的设备上</li>
+                                                    <li>我们<strong>不会联网读取</strong>任何券商数据或用户交易信息</li>
+                                                    <li>您的交易隐私得到最大程度的保护</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>设计理念</h6>
+                                                <ul>
+                                                    <li><strong>手动记录交易本身就是一种复盘过程</strong></li>
+                                                    <li>在记录过程中，您会重新思考交易决策和结果</li>
+                                                    <li>这种主动参与有助于提升交易技能和风险意识</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                         <div class="alert alert-info">
                                             <i class="fas fa-lightbulb me-2"></i>
-                                            <strong>提示：</strong> 如果您有现有记录，也可以从CSV文件导入交易。
+                                            <strong>提示：</strong> 将记录交易视为交易流程的一部分，这样既能保护隐私，又能促进交易技能的提升。
                                         </div>
                                     </div>
                                 </div>
@@ -215,31 +225,64 @@
                             <div class="qa-item" data-category="getting-started">
                                 <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq2">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">跟踪交易需要哪些信息？</h5>
+                                        <h5 class="mb-0">如何快速记录我的第一笔交易记录？</h5>
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                                 <div class="collapse qa-answer" id="faq2">
                                     <div class="p-3">
-                                        <p>为了准确跟踪，您应该记录：</p>
+                                        <h6>在快速记录区域，可以以最短的时间记录一笔交易</h6>
+                                        <ol>
+                                            <li>打开 TradeFlex，找到快速记录区域</li>
+                                            <li>选择交易日期（默认为今天日期）</li>
+                                            <li>输入资产代码（如 AAPL、BTC）</li>
+                                            <li>输入价格（单价或总价）</li>
+                                            <li>输入数量</li>
+                                            <li>点击交易执行按钮（如：买入，卖出）</li>
+                                        </ol>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-lightbulb me-2"></i>
+                                            <strong>提示：</strong> 子持仓为选填项目，如果不主动填写的话，TradeFlex将会自动为您创建一个与资产名称同名的子持仓，为默认子持仓。
+                                        </div>
+                                        <hr>
+                                        <h6>如果希望详细记录一笔交易，则可以点击添加交易按钮</h6>
+                                        <ol>
+                                            <li>在交易记录区域找到并点击 <strong>"+"</strong> 按钮</li>
+                                            <li>选择 <strong>"交易类型"</strong></li>
+                                            <li>输入交易详情（代码、数量、价格、日期）</li>
+                                            <li>添加详细内容，如标签，备注等</li>
+                                            <li>点击 <strong>"添加交易"</strong> 记录交易</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="getting-started">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">记录交易需要哪些信息？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq3">
+                                    <div class="p-3">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <h6>必需信息：</h6>
                                                 <ul>
+                                                    <li>交易日期（APP会自动填入今天的日期）</li>
                                                     <li>资产代码（如 AAPL、BTC）</li>
-                                                    <li>交易类型（买入/卖出）</li>
-                                                    <li>数量/交易量</li>
-                                                    <li>单价</li>
-                                                    <li>交易日期和时间</li>
+                                                    <li>交易数量</li>
+                                                    <li>单价/总价</li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-6">
                                                 <h6>可选信息：</h6>
                                                 <ul>
-                                                    <li>交易费用/佣金</li>
-                                                    <li>备注或使用的策略</li>
-                                                    <li>投资组合/账户名称</li>
-                                                    <li>分类标签</li>
+                                                    <li>子持仓（如果留空则会创建一个和资产代码同名的子持仓）</li>
+                                                    <li>交易时主观的恐惧贪婪指数</li>
+                                                    <li>备注信息</li>
+                                                    <li>自定义标签</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -254,31 +297,6 @@
                                 <i class="fas fa-chart-bar me-2"></i>交易记录管理
                             </h2>
                             
-                            <div class="qa-item" data-category="trading">
-                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">如何从券商导入交易记录？</h5>
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                </div>
-                                <div class="collapse qa-answer" id="faq3">
-                                    <div class="p-3">
-                                        <p>您可以使用CSV文件导入交易：</p>
-                                        <ol>
-                                            <li>从您的券商导出交易历史为CSV文件</li>
-                                            <li>在 TradeFlex 中，前往 <strong>设置 → 导入/导出</strong></li>
-                                            <li>点击 <strong>"导入CSV"</strong></li>
-                                            <li>选择您的CSV文件并将列映射到TradeFlex字段</li>
-                                            <li>预览并确认导入</li>
-                                        </ol>
-                                        <div class="alert alert-warning">
-                                            <i class="fas fa-exclamation-triangle me-2"></i>
-                                            <strong>注意：</strong> 确保您的CSV文件包含所有必需字段（代码、类型、数量、价格、日期）。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="qa-item" data-category="trading">
                                 <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq4">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -306,8 +324,11 @@
                                                     <li>点击 <strong>"删除"</strong> 按钮</li>
                                                     <li>确认删除</li>
                                                 </ol>
-                                                <small class="text-muted">注意：除非您有备份，否则已删除的交易无法恢复。</small>
                                             </div>
+                                        </div>
+                                        <div class="alert alert-warning">
+                                            <i class="fas fa-exclamation-triangle me-2"></i>
+                                            <strong>注意：</strong> 除非您有备份，否则已删除的交易无法恢复。
                                         </div>
                                     </div>
                                 </div>
@@ -340,12 +361,141 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <p class="mt-3">应用自动考虑：</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq5a">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">均价是如何计算的？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq5a">
+                                    <div class="p-3">
+                                        <p>TradeFlex 使用加权平均成本法计算持仓的均价：</p>
+                                        <h6>计算方法：</h6>
+                                        <p>均价 = 总成本 ÷ 总持仓数量</p>
+                                        <h6>示例计算：</h6>
+                                        <div class="card bg-light">
+                                            <div class="card-body">
+                                                <p><strong>第一次买入：</strong></p>
+                                                <ul>
+                                                    <li>100股苹果股票 @ $150 = $15,000</li>
+                                                    <li>当前均价：$150</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>第二次买入：</strong></p>
+                                                <ul>
+                                                    <li>50股苹果股票 @ $180 = $9,000</li>
+                                                    <li>总成本：$15,000 + $9,000 = $24,000</li>
+                                                    <li>总股数：100 + 50 = 150股</li>
+                                                    <li>新均价：$24,000 ÷ 150 = $160</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>部分卖出后：</strong></p>
+                                                <ul>
+                                                    <li>卖出30股 @ $170</li>
+                                                    <li>剩余股数：150 - 30 = 120股</li>
+                                                    <li>均价保持：$160（不变）</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h6 class="mt-3">重要说明：</h6>
                                         <ul>
-                                            <li>交易费用和佣金</li>
-                                            <li>货币转换</li>
-                                            <li>股票分割和股息</li>
-                                            <li>洗售规则（如适用）</li>
+                                            <li>均价只在买入时重新计算</li>
+                                            <li>卖出操作不会改变剩余持仓的均价</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq5b">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">摊薄均价是如何计算的？</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq5b">
+                                    <div class="p-3">
+                                        <p>TradeFlex 使用摊薄均价来反映考虑手续费、盈亏和股息后的真实持仓成本。摊薄均价会在每次买入、卖出、股息等操作后重新计算。</p>
+                                        <h6>计算方法：</h6>
+                                        <p>摊薄均价考虑了以下因素：</p>
+                                        <ul>
+                                            <li><strong>手续费：</strong> 交易产生的成本</li>
+                                            <li><strong>盈亏：</strong> 已实现的盈亏金额</li>
+                                            <li><strong>股息：</strong> 收到的股息收入</li>
+                                        </ul>
+                                        <h6>做多（买入）操作：</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>首次买入：</strong></p>
+                                                <p>摊薄均价 = (数量 × 价格 + 手续费) ÷ 数量</p>
+                                                <p class="mt-3"><strong>再次买入（加仓）：</strong></p>
+                                                <p>新摊薄均价 = (总数量 × 新均价 - (累计盈利 + 累计股息 - 累计手续费)) ÷ 总数量</p>
+                                            </div>
+                                        </div>
+                                        <h6>示例计算：</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>第一次买入：</strong></p>
+                                                <ul>
+                                                    <li>100股苹果股票 @ $150，手续费 $5</li>
+                                                    <li>摊薄均价 = (100 × 150 + 5) ÷ 100 = $150.05</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>第二次买入（加仓）：</strong></p>
+                                                <ul>
+                                                    <li>50股苹果股票 @ $180，手续费 $3</li>
+                                                    <li>当前均价 = (100 × 150 + 50 × 180) ÷ 150 = $160</li>
+                                                    <li>累计盈利 = $0，累计股息 = $0，累计手续费 = $8</li>
+                                                    <li>新摊薄均价 = (150 × 160 - (0 + 0 - 8)) ÷ 150 = $160.05</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>部分卖出后：</strong></p>
+                                                <ul>
+                                                    <li>卖出30股 @ $170，实现盈利 $300，手续费 $2</li>
+                                                    <li>剩余数量 = 120股</li>
+                                                    <li>累计盈利 = $300，累计股息 = $0，累计手续费 = $10</li>
+                                                    <li>新摊薄均价 = (120 × 160 - (300 + 0 - 10)) ÷ 120 = $159.75</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>收到股息后：</strong></p>
+                                                <ul>
+                                                    <li>收到股息 $50</li>
+                                                    <li>累计盈利 = $300，累计股息 = $50，累计手续费 = $10</li>
+                                                    <li>新摊薄均价 = (120 × 160 - (300 + 50 - 10)) ÷ 120 = $159.33</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h6>做空（卖出开空）操作：</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>首次做空：</strong></p>
+                                                <p>摊薄均价 = (数量 × 价格 - 手续费) ÷ 数量</p>
+                                                <p class="mt-3"><strong>再次做空（加仓）：</strong></p>
+                                                <p>新摊薄均价 = (总数量 × 新均价 + (累计盈利 + 累计股息 - 累计手续费)) ÷ 总数量</p>
+                                            </div>
+                                        </div>
+                                        <h6>示例计算：</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>第一次做空：</strong></p>
+                                                <ul>
+                                                    <li>100股苹果股票 @ $150，手续费 $5</li>
+                                                    <li>摊薄均价 = (100 × 150 - 5) ÷ 100 = $149.95</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>部分平仓后：</strong></p>
+                                                <ul>
+                                                    <li>买入平仓30股 @ $140，实现盈利 $300，手续费 $2</li>
+                                                    <li>剩余数量 = 70股</li>
+                                                    <li>累计盈利 = $300，累计股息 = $0，累计手续费 = $7</li>
+                                                    <li>新摊薄均价 = (70 × 150 + (300 + 0 - 7)) ÷ 70 = $154.19</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h6>重要说明：</h6>
+                                        <ul>
+                                            <li><strong>摊薄均价与均价的区别：</strong> 均价只考虑买入价格和数量；摊薄均价考虑了手续费、盈亏和股息，更能反映真实成本</li>
+                                            <li><strong>做多与做空的区别：</strong> 做多时，盈利和股息会降低摊薄均价（收回成本）；做空时，盈利和股息会提高摊薄均价（反映成本变化）</li>
+                                            <li><strong>摊薄均价的意义：</strong> 帮助您更准确地评估持仓的真实成本；在做T（部分买卖）时，能更好地反映剩余持仓的成本变化；考虑了所有交易成本，包括手续费和已实现盈亏</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -360,10 +510,10 @@
                                 </div>
                                 <div class="collapse qa-answer" id="faq6">
                                     <div class="p-3">
-                                        <p>是的，TradeFlex 提供多种税务报告导出选项：</p>
+                                        <p>目前暂不支持税务报告导出功能，但我们计划在未来的版本中添加此功能。</p>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <h6>可用格式：</h6>
+                                                <h6>计划中的功能：</h6>
                                                 <ul>
                                                     <li>PDF报告</li>
                                                     <li>Excel电子表格</li>
@@ -372,7 +522,7 @@
                                                 </ul>
                                             </div>
                                             <div class="col-md-6">
-                                                <h6>报告类型：</h6>
+                                                <h6>将包含的报告类型：</h6>
                                                 <ul>
                                                     <li>已实现收益/损失</li>
                                                     <li>未实现持仓</li>
@@ -448,9 +598,8 @@
                                             <div class="col-md-6">
                                                 <h6>创建备份：</h6>
                                                 <ol>
-                                                    <li>前往 <strong>设置 → 备份与恢复</strong></li>
+                                                    <li>前往 <strong>设置 → 数据管理</strong></li>
                                                     <li>点击 <strong>"创建备份"</strong></li>
-                                                    <li>选择备份位置（本地/云端）</li>
                                                     <li>等待备份完成</li>
                                                 </ol>
                                             </div>
@@ -463,10 +612,6 @@
                                                     <li>确认恢复操作</li>
                                                 </ol>
                                             </div>
-                                        </div>
-                                        <div class="alert alert-success">
-                                            <i class="fas fa-check-circle me-2"></i>
-                                            <strong>建议：</strong> 设置自动每日备份以确保您的数据始终受到保护。
                                         </div>
                                     </div>
                                 </div>
@@ -558,7 +703,7 @@
                     <p class="mb-0 text-light">&copy; 2025 TradeFlex. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0 text-light">最后更新：2025年1月</p>
+                    <p class="mb-0 text-light">最后更新：2025年11月</p>
                 </div>
             </div>
         </div>

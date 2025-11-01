@@ -189,24 +189,34 @@
                             <div class="qa-item" data-category="getting-started">
                                 <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq1">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">How do I create my first trading record?</h5>
+                                        <h5 class="mb-0">Can I automatically import trading records from brokers?</h5>
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                                 <div class="collapse qa-answer" id="faq1">
                                     <div class="p-3">
-                                        <p>To create your first trading record:</p>
-                                        <ol>
-                                            <li>Open TradeFlex and tap the <strong>"+"</strong> button</li>
-                                            <li>Select <strong>"Add Trade"</strong></li>
-                                            <li>Choose the asset type (Stock, Crypto, Forex, etc.)</li>
-                                            <li>Enter the trade details (symbol, quantity, price, date)</li>
-                                            <li>Select whether it's a Buy or Sell transaction</li>
-                                            <li>Tap <strong>"Save"</strong> to record the trade</li>
-                                        </ol>
+                                        <p>We're sorry, but TradeFlex does not support automatic import of trading records from brokers. This is based on the following important reasons:</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Privacy First</h6>
+                                                <ul>
+                                                    <li>TradeFlex uses <strong>pure local storage</strong>, all data is saved on your device</li>
+                                                    <li>We <strong>do not connect to the internet</strong> to read any broker data or user trading information</li>
+                                                    <li>Your trading privacy is maximally protected</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Design Philosophy</h6>
+                                                <ul>
+                                                    <li><strong>Manually recording trades is itself a review process</strong></li>
+                                                    <li>During recording, you will reconsider trading decisions and results</li>
+                                                    <li>This active participation helps improve trading skills and risk awareness</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                         <div class="alert alert-info">
                                             <i class="fas fa-lightbulb me-2"></i>
-                                            <strong>Tip:</strong> You can also import trades from CSV files if you have existing records.
+                                            <strong>Tip:</strong> Treat recording trades as part of the trading process, which protects privacy while promoting trading skill improvement.
                                         </div>
                                     </div>
                                 </div>
@@ -215,31 +225,64 @@
                             <div class="qa-item" data-category="getting-started">
                                 <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq2">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">What information do I need to track my trades?</h5>
+                                        <h5 class="mb-0">How do I quickly record my first trading record?</h5>
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                                 <div class="collapse qa-answer" id="faq2">
                                     <div class="p-3">
-                                        <p>For accurate tracking, you should record:</p>
+                                        <h6>In the quick record area, you can record a trade in the shortest time</h6>
+                                        <ol>
+                                            <li>Open TradeFlex and find the quick record area</li>
+                                            <li>Select the trade date (defaults to today's date)</li>
+                                            <li>Enter the asset symbol (e.g., AAPL, BTC)</li>
+                                            <li>Enter the price (unit price or total price)</li>
+                                            <li>Enter the quantity</li>
+                                            <li>Click the trade execution button (e.g., Buy, Sell)</li>
+                                        </ol>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-lightbulb me-2"></i>
+                                            <strong>Tip:</strong> Sub-position is optional. If you don't fill it in, TradeFlex will automatically create a sub-position with the same name as the asset, which will be the default sub-position.
+                                        </div>
+                                        <hr>
+                                        <h6>If you want to record a trade in detail, you can click the add trade button</h6>
+                                        <ol>
+                                            <li>Find and click the <strong>"+"</strong> button in the trading records area</li>
+                                            <li>Select <strong>"Trade Type"</strong></li>
+                                            <li>Enter trade details (symbol, quantity, price, date)</li>
+                                            <li>Add detailed content, such as tags, notes, etc.</li>
+                                            <li>Click <strong>"Add Trade"</strong> to record the trade</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="getting-started">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">What information do I need to record a trade?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq3">
+                                    <div class="p-3">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <h6>Required Information:</h6>
                                                 <ul>
+                                                    <li>Trade date (APP will automatically fill in today's date)</li>
                                                     <li>Asset symbol (e.g., AAPL, BTC)</li>
-                                                    <li>Trade type (Buy/Sell)</li>
-                                                    <li>Quantity/Volume</li>
-                                                    <li>Price per unit</li>
-                                                    <li>Trade date and time</li>
+                                                    <li>Trade quantity</li>
+                                                    <li>Unit price/Total price</li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-6">
                                                 <h6>Optional Information:</h6>
                                                 <ul>
-                                                    <li>Trading fees/commissions</li>
-                                                    <li>Notes or strategy used</li>
-                                                    <li>Portfolio/account name</li>
-                                                    <li>Tags for categorization</li>
+                                                    <li>Sub-position (if left blank, a sub-position with the same name as the asset symbol will be created)</li>
+                                                    <li>Subjective fear and greed index at the time of trade</li>
+                                                    <li>Notes</li>
+                                                    <li>Custom tags</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -254,31 +297,6 @@
                                 <i class="fas fa-chart-bar me-2"></i>Trading Records Management
                             </h2>
                             
-                            <div class="qa-item" data-category="trading">
-                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">How do I import trades from my broker?</h5>
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                </div>
-                                <div class="collapse qa-answer" id="faq3">
-                                    <div class="p-3">
-                                        <p>You can import trades using CSV files:</p>
-                                        <ol>
-                                            <li>Export your trade history from your broker as a CSV file</li>
-                                            <li>In TradeFlex, go to <strong>Settings → Import/Export</strong></li>
-                                            <li>Tap <strong>"Import CSV"</strong></li>
-                                            <li>Select your CSV file and map the columns to TradeFlex fields</li>
-                                            <li>Review the preview and confirm the import</li>
-                                        </ol>
-                                        <div class="alert alert-warning">
-                                            <i class="fas fa-exclamation-triangle me-2"></i>
-                                            <strong>Note:</strong> Make sure your CSV file includes all required fields (symbol, type, quantity, price, date).
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="qa-item" data-category="trading">
                                 <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq4">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -306,8 +324,11 @@
                                                     <li>Tap the <strong>"Delete"</strong> button</li>
                                                     <li>Confirm the deletion</li>
                                                 </ol>
-                                                <small class="text-muted">Note: Deleted trades cannot be recovered unless you have a backup.</small>
                                             </div>
+                                        </div>
+                                        <div class="alert alert-warning">
+                                            <i class="fas fa-exclamation-triangle me-2"></i>
+                                            <strong>Note:</strong> Deleted trades cannot be recovered unless you have a backup.
                                         </div>
                                     </div>
                                 </div>
@@ -340,12 +361,141 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <p class="mt-3">The app automatically accounts for:</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq5a">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">How is the average price calculated?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq5a">
+                                    <div class="p-3">
+                                        <p>TradeFlex uses the weighted average cost method to calculate the average price of positions:</p>
+                                        <h6>Calculation Method:</h6>
+                                        <p>Average Price = Total Cost ÷ Total Position Quantity</p>
+                                        <h6>Example Calculation:</h6>
+                                        <div class="card bg-light">
+                                            <div class="card-body">
+                                                <p><strong>First Buy:</strong></p>
+                                                <ul>
+                                                    <li>100 shares of AAPL @ $150 = $15,000</li>
+                                                    <li>Current Average Price: $150</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>Second Buy:</strong></p>
+                                                <ul>
+                                                    <li>50 shares of AAPL @ $180 = $9,000</li>
+                                                    <li>Total Cost: $15,000 + $9,000 = $24,000</li>
+                                                    <li>Total Shares: 100 + 50 = 150 shares</li>
+                                                    <li>New Average Price: $24,000 ÷ 150 = $160</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>After Partial Sell:</strong></p>
+                                                <ul>
+                                                    <li>Sell 30 shares @ $170</li>
+                                                    <li>Remaining Shares: 150 - 30 = 120 shares</li>
+                                                    <li>Average Price Remains: $160 (unchanged)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h6 class="mt-3">Important Notes:</h6>
                                         <ul>
-                                            <li>Trading fees and commissions</li>
-                                            <li>Currency conversions</li>
-                                            <li>Stock splits and dividends</li>
-                                            <li>Wash sale rules (where applicable)</li>
+                                            <li>Average price is only recalculated on buy transactions</li>
+                                            <li>Sell transactions do not change the average price of remaining positions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-item" data-category="analytics">
+                                <div class="qa-question p-3" data-bs-toggle="collapse" data-bs-target="#faq5b">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">How is the diluted average price calculated?</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="collapse qa-answer" id="faq5b">
+                                    <div class="p-3">
+                                        <p>TradeFlex uses diluted average price to reflect the true cost of holdings considering fees, P&L, and dividends. The diluted average price is recalculated after each buy, sell, dividend, and other operations.</p>
+                                        <h6>Calculation Method:</h6>
+                                        <p>The diluted average price considers the following factors:</p>
+                                        <ul>
+                                            <li><strong>Fees:</strong> Costs incurred from trading</li>
+                                            <li><strong>P&L:</strong> Realized profit/loss amounts</li>
+                                            <li><strong>Dividends:</strong> Dividend income received</li>
+                                        </ul>
+                                        <h6>Long (Buy) Operations:</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>First Buy:</strong></p>
+                                                <p>Diluted Average Price = (Quantity × Price + Fees) ÷ Quantity</p>
+                                                <p class="mt-3"><strong>Buy Again (Add Position):</strong></p>
+                                                <p>New Diluted Average Price = (Total Quantity × New Average Price - (Cumulative Profit + Cumulative Dividends - Cumulative Fees)) ÷ Total Quantity</p>
+                                            </div>
+                                        </div>
+                                        <h6>Example Calculation:</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>First Buy:</strong></p>
+                                                <ul>
+                                                    <li>100 shares of AAPL @ $150, fees $5</li>
+                                                    <li>Diluted Average Price = (100 × 150 + 5) ÷ 100 = $150.05</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>Second Buy (Add Position):</strong></p>
+                                                <ul>
+                                                    <li>50 shares of AAPL @ $180, fees $3</li>
+                                                    <li>Current Average Price = (100 × 150 + 50 × 180) ÷ 150 = $160</li>
+                                                    <li>Cumulative Profit = $0, Cumulative Dividends = $0, Cumulative Fees = $8</li>
+                                                    <li>New Diluted Average Price = (150 × 160 - (0 + 0 - 8)) ÷ 150 = $160.05</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>After Partial Sell:</strong></p>
+                                                <ul>
+                                                    <li>Sell 30 shares @ $170, realized profit $300, fees $2</li>
+                                                    <li>Remaining Quantity = 120 shares</li>
+                                                    <li>Cumulative Profit = $300, Cumulative Dividends = $0, Cumulative Fees = $10</li>
+                                                    <li>New Diluted Average Price = (120 × 160 - (300 + 0 - 10)) ÷ 120 = $159.75</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>After Receiving Dividends:</strong></p>
+                                                <ul>
+                                                    <li>Received dividends $50</li>
+                                                    <li>Cumulative Profit = $300, Cumulative Dividends = $50, Cumulative Fees = $10</li>
+                                                    <li>New Diluted Average Price = (120 × 160 - (300 + 50 - 10)) ÷ 120 = $159.33</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h6>Short (Sell to Open) Operations:</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>First Short:</strong></p>
+                                                <p>Diluted Average Price = (Quantity × Price - Fees) ÷ Quantity</p>
+                                                <p class="mt-3"><strong>Short Again (Add Position):</strong></p>
+                                                <p>New Diluted Average Price = (Total Quantity × New Average Price + (Cumulative Profit + Cumulative Dividends - Cumulative Fees)) ÷ Total Quantity</p>
+                                            </div>
+                                        </div>
+                                        <h6>Example Calculation:</h6>
+                                        <div class="card bg-light mb-3">
+                                            <div class="card-body">
+                                                <p><strong>First Short:</strong></p>
+                                                <ul>
+                                                    <li>100 shares of AAPL @ $150, fees $5</li>
+                                                    <li>Diluted Average Price = (100 × 150 - 5) ÷ 100 = $149.95</li>
+                                                </ul>
+                                                <p class="mt-3"><strong>After Partial Close:</strong></p>
+                                                <ul>
+                                                    <li>Buy to close 30 shares @ $140, realized profit $300, fees $2</li>
+                                                    <li>Remaining Quantity = 70 shares</li>
+                                                    <li>Cumulative Profit = $300, Cumulative Dividends = $0, Cumulative Fees = $7</li>
+                                                    <li>New Diluted Average Price = (70 × 150 + (300 + 0 - 7)) ÷ 70 = $154.19</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h6>Important Notes:</h6>
+                                        <ul>
+                                            <li><strong>Difference between Diluted Average Price and Average Price:</strong> Average price only considers buy price and quantity; diluted average price considers fees, P&L, and dividends, better reflecting true cost</li>
+                                            <li><strong>Difference between Long and Short:</strong> For long positions, profit and dividends reduce the diluted average price (recovering cost); for short positions, profit and dividends increase the diluted average price (reflecting cost changes)</li>
+                                            <li><strong>Significance of Diluted Average Price:</strong> Helps you more accurately assess the true cost of holdings; when doing partial trades (T trading), better reflects cost changes of remaining positions; considers all trading costs, including fees and realized P&L</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -360,10 +510,10 @@
                                 </div>
                                 <div class="collapse qa-answer" id="faq6">
                                     <div class="p-3">
-                                        <p>Yes, TradeFlex provides several export options for tax reporting:</p>
+                                        <p>Tax report export functionality is currently not supported, but we plan to add this feature in future versions.</p>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <h6>Available Formats:</h6>
+                                                <h6>Planned Features:</h6>
                                                 <ul>
                                                     <li>PDF reports</li>
                                                     <li>Excel spreadsheets</li>
@@ -372,7 +522,7 @@
                                                 </ul>
                                             </div>
                                             <div class="col-md-6">
-                                                <h6>Report Types:</h6>
+                                                <h6>Report Types to Include:</h6>
                                                 <ul>
                                                     <li>Realized gains/losses</li>
                                                     <li>Unrealized positions</li>
@@ -448,9 +598,8 @@
                                             <div class="col-md-6">
                                                 <h6>To Create a Backup:</h6>
                                                 <ol>
-                                                    <li>Go to <strong>Settings → Backup & Restore</strong></li>
+                                                    <li>Go to <strong>Settings → Data Management</strong></li>
                                                     <li>Tap <strong>"Create Backup"</strong></li>
-                                                    <li>Choose backup location (local/cloud)</li>
                                                     <li>Wait for backup completion</li>
                                                 </ol>
                                             </div>
@@ -463,10 +612,6 @@
                                                     <li>Confirm the restore operation</li>
                                                 </ol>
                                             </div>
-                                        </div>
-                                        <div class="alert alert-success">
-                                            <i class="fas fa-check-circle me-2"></i>
-                                            <strong>Recommendation:</strong> Set up automatic daily backups to ensure your data is always protected.
                                         </div>
                                     </div>
                                 </div>
@@ -558,7 +703,7 @@
                     <p class="mb-0 text-light">&copy; 2025 TradeFlex. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0 text-light">Last updated: January 2025</p>
+                    <p class="mb-0 text-light">Last updated: October 2025</p>
                 </div>
             </div>
         </div>
